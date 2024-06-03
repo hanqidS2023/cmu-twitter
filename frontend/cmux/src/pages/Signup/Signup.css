@@ -1,0 +1,89 @@
+.signUpContainer {
+  height: 100vh;
+  background-color: #242d34;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.signUpContainer::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  background-color: #15202b;
+  width: 540px;
+  min-height: 600px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+}
+
+.signuplogo {
+  display: flex;
+  justify-content: center;
+}
+
+.signupHeader {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30.1875px;
+  margin: 15px 0px;
+}
+
+.acceptTerm {
+  color: #ffffff;
+  font-size: 15px;
+  gap: normal;
+  margin: 59px 0px 0px;
+}
+.acceptTermBlue {
+  color: #1b95e0;
+}
+
+.signupBtn {
+  background-color: #1da1f2;
+  color: white;
+  border: none; 
+  border-radius: 9999px; 
+  padding: 15px; 
+  margin: 15px 0; 
+  font-size: 15px; 
+  font-weight: bold;
+  cursor: pointer; 
+  display: block; 
+  width: 100%; 
+  text-align: center; 
+  transition: background-color 0.3s; 
+}
+
+.error-message {
+  color: #f44336; 
+  background-color: #fff3f3; 
+  border: 1px solid #f44336; 
+  border-radius: 4px; 
+  padding: 10px;
+  margin: 10px 0; 
+  text-align: center; 
+  font-size: 14px; 
+}
+
+
+@media (min-width: 0) and (max-width: 700px) {
+  .error-message {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 700px) {
+  .signUpContainer {
+    background-color: #15202b;
+    height: auto;
+  }
+  .card {
+    background-color: #15202b;
+    margin: 0px;
+  }
+}

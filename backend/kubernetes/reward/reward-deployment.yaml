@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reward-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reward
+  template:
+    metadata:
+      labels:
+        app: reward
+    spec:
+      containers:
+      - name: reward-container
+        image: hanqid/cmux-reward:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
+        envFrom:
+        - configMapRef:
+            name: reward-config

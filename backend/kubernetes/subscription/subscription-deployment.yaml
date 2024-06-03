@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: subscription-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subscription
+  template:
+    metadata:
+      labels:
+        app: subscription
+    spec:
+      containers:
+      - name: subscription-container
+        image: raystudyhardworkhard/subscription-service:v24
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: subscription-config

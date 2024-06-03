@@ -1,0 +1,118 @@
+.rewardTitle {
+  padding: 15px;
+  align-items: center;
+}
+.rewardTitle > span {
+  margin-top: 2px;
+  color: #ffffff;
+  display: inline;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.tableRow {
+  background-color: #1da1f2;
+}
+
+.tableRow .tableCell {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.rewardTitle > p {
+  margin-top: 20px;
+  color: #ffffff;
+  display: inline;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.rewardTitle > .MuiSvgIcon-root {
+  margin-left: auto;
+  border-color: var(--blue);
+  color: var(--blue);
+  fill: var(--blue);
+  font-size: 19px;
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 9999px;
+}
+.rewardTitle > .MuiSvgIcon-root:hover {
+  background-color: var(--hover-blue-color);
+}
+.rewardCategory {
+  display: flex;
+  flex: 1;
+  border-bottom: 0.5px var(--border-color) solid;
+}
+.rewardCategory > div {
+  flex: 0.5;
+  text-align: center;
+  color: #fff;
+  display: inline;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px;
+}
+.rewardActive {
+  border-bottom: 2px var(--blue) solid;
+}
+.rewardActive > span {
+  color: var(--blue);
+}
+.rewardCategory > div:hover {
+  background-color: var(--hover-blue-color);
+  color: var(--blue);
+}
+
+.rewardTitle .MuiAvatar-root {
+  display: none;
+}
+@media (min-width: 0) and (max-width: 450px) {
+  .rewardTitle .MuiAvatar-root {
+    display: block;
+    margin-right: 20px;
+    height: 32px;
+    width: 32px;
+  }
+  article {
+    min-height: 100vh;
+  }
+}
+
+.modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+}
+
+.modalTitle {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.successTitle {
+  padding: 15px;
+  align-items: center;
+}
+
+.successTitle > span {
+  margin-top: 2px;
+  color: #ffffff;
+  display: inline;
+  font-size: 90px;
+  font-weight: 800;
+}

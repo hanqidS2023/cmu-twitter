@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cassandra-schema-loader
+spec:
+  template:
+    spec:
+      containers:
+      - name: cassandra-schema-loader
+        image: leolando/cassandra-config:latest
+        command: ["/bin/bash", "-c"]
+        args: ["sleep 60 && echo loading cassandra keyspace && cqlsh cassandra -f /schema.cql"]
+      restartPolicy: OnFailure

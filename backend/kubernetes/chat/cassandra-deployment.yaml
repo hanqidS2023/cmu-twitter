@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cassandra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cassandra
+  template:
+    metadata:
+      labels:
+        app: cassandra
+    spec:
+      containers:
+      - name: cassandra
+        image: cassandra:latest
+        ports:
+        - containerPort: 9042
+        volumeMounts:
+        - mountPath: /var/lib/cassandra
+          name: cassandra-data
+      volumes:
+      - name: cassandra-data
+        persistentVolumeClaim:
+          claimName: cassandra-pvc

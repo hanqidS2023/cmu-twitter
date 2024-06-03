@@ -1,0 +1,114 @@
+.post {
+  padding-top: 10px;
+  border-bottom: 0.5px var(--border-color) solid;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.post:hover {
+  background-color: var(--hover-color);
+}
+.post > div > .MuiAvatar-root {
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px 0px 15px;
+}
+.post-content-col {
+  margin-right: 15px;
+  flex: 1;
+  position: relative;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+}
+.post-header-displayname {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.post-header-displayname:hover {
+  text-decoration: underline;
+}
+.post-header-username {
+  color: var(--gray);
+  font-size: 15px;
+}
+.post-header-date {
+  margin-left: 5px;
+  color: var(--gray);
+  font-size: 15px;
+}
+.postMoreIcon {
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: -5px;
+  color: var(--gray);
+  border-radius: 9999px;
+  padding: 5px;
+}
+
+.postMoreIcon:hover {
+  background-color: var(--hover-blue-color);
+  color: var(--blue);
+}
+
+.post-content {
+  text-align: justify;
+  color: #ffffff;
+  display: inline;
+  font-size: 15px;
+}
+
+.post-event {
+  display: flex;
+  flex: 1;
+}
+.post-event > div {
+  flex: 0.25;
+  display: flex;
+  align-items: center;
+}
+.post-event > div > span {
+  color: var(--gray);
+  font-size: 13px;
+}
+.postIcon {
+  fill: var(--gray);
+  width: 18px;
+  padding: 10px;
+  border-radius: 9999px;
+}
+.post-event div:nth-child(1) .postIcon:hover,
+.post-event div:nth-child(4) .postIcon:hover {
+  fill: var(--blue);
+  background-color: var(--hover-blue-color);
+}
+.post-event div:nth-child(1) .postIcon:hover + span {
+  color: var(--blue);
+}
+.post-event div:nth-child(2) .postIcon:hover {
+  fill: #17bf63;
+  background-color: rgba(23, 191, 99, 0.1);
+}
+.post-event div:nth-child(2) .postIcon:hover + span {
+  color: #17bf63;
+}
+.post-event div:nth-child(3) .postIcon:hover {
+  fill: #e0245e;
+  background-color: rgba(224, 36, 94, 0.1);
+}
+.post-event div:nth-child(3) .postIcon:hover + span {
+  color: #e0245e;
+}
+.post-image {
+  padding-top: 10px;
+}
+
+.post-image img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 300px;
+  object-fit: cover;
+}

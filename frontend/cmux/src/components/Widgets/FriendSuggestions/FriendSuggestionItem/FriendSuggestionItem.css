@@ -1,0 +1,26 @@
+.friendSuggestionsItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 0.5px var(--border-color) solid;
+}
+.friendSuggestionImage {
+  padding: 15px 10px;
+}
+.friendSuggestionImage .MuiAvatar-root {
+  z-index: 1;
+}
+.friendFollowButton {
+  border-radius: 9999px;
+  border: 1px var(--blue) solid;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 15px;
+  padding: 5px 16px;
+}
+.friendFollowButton:hover {
+  background-color: var(--hover-blue-color);
+}

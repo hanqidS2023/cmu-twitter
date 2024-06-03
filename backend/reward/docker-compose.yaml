@@ -1,0 +1,53 @@
+version: '3'
+services:
+  reward-app:
+    container_name: sda-reward-backend
+    image: sda-reward-backend
+    build:
+      dockerfile: Dockerfile-reward
+    environment:
+      - DB_HOST=user-credit
+      - AWS_ACCESS_KEY_ID=AKIA2USN5UESAF6CJXE5
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_REGION=us-east-2
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      - reward-db
+      - rabbitmq
+    networks:
+      - reward
+      - rabbitmq
+
+  reward-db:
+    container_name: user-credit
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: 'sda-reward'
+      MYSQL_USER: 'reward'
+      MYSQL_PASSWORD: 'password'
+    ports:
+      - 3306:3306
+    networks:
+      - reward
+
+  rabbitmq:
+    build:
+      context: .
+      dockerfile: Dockerfile.rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "61613:61613"
+    networks: 
+      - rabbitmq
+
+networks:
+  reward: 
+    driver: bridge
+  rabbitmq:
+    driver: bridge

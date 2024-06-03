@@ -1,0 +1,70 @@
+.userListContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: white;
+    align-items: center;
+}
+
+.userListHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.userListHeader h3 {
+    margin: 0;
+}
+
+.userListHeader button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.userListContainer {
+    border: none;
+}
+
+.userListHeader button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.userList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.userList li {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.userList li:hover {
+    background-color: rgba(245, 245, 245, 0.8);
+    color: black;
+}
+
+.userListItem {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.selected {
+    background-color: #007bff;
+    color: black;
+}

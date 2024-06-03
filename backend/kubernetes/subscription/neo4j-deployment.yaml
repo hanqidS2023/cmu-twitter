@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neo4j-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neo4j
+  template:
+    metadata:
+      labels:
+        app: neo4j
+    spec:
+      containers:
+      - name: neo4j
+        image: bitnami/neo4j:latest
+        env:
+        - name: NEO4J_AUTH
+          value: "neo4j/bitnami1"
+        - name: NEO4J_dbms_config_strict_validation_enabled
+          value: "false"

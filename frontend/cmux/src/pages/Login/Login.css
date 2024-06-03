@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  background-color: #15202b;
+  height: 100vh;
+}
+
+.panel {
+  margin: 15px auto auto auto;
+  max-width: 400px;
+  padding: 0px 15px;
+}
+
+.panelHeader {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px;
+}
+
+.panelHeaderText {
+  color: #ffffff;
+  display: inline;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39.375px;
+  font-family: Chirp, Verdana, System;
+  margin-top: 36px;
+}
+.inputs {
+  padding: 0px 15px;
+}
+
+.loginBtn {
+  background-color: #1da1f2;
+  border: none; /* Assuming you don't want a border, but add if needed */
+  border-radius: 9999px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 15px; /* This will give it the same horizontal padding as the inputs */
+  padding: 15px; /* Adjust vertical padding if needed */
+  text-align: center;
+  display: block; /* Makes it a block-level element */
+  width: calc(100% - 30px); /* 100% of the parent's width minus the padding on both sides */
+  box-sizing: border-box; /* Ensures that padding and border are included in the width */
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  transition: background-color 0.2s; /* Smooth transition for hover state */
+}
+
+.loginBtn:hover {
+  background-color: #1a8cd8; /* Slightly darker blue on hover */
+}
+
+.loginText {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.loginLinks {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.link {
+  color: #1b95e0;
+}
+
+.point {
+  color: white;
+  margin: 5px;
+}
+
+.error-message {
+  color: #f44336; 
+  background-color: #fff3f3; 
+  border: 1px solid #f44336; 
+  border-radius: 4px; 
+  padding: 10px;
+  margin: 10px 0; 
+  text-align: center; 
+  font-size: 14px; 
+}
+
+
+@media (min-width: 0) and (max-width: 700px) {
+  .error-message {
+    margin: 10px;
+  }
+}

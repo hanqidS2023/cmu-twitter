@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: post-db
+  template:
+    metadata:
+      labels:
+        app: post-db
+    spec:
+      containers:
+        - name: post-db-container
+          image: mysql:8.1.0
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "zhangzcx1999"
+            - name: MYSQL_DATABASE
+              value: "myPostServiceDB"
+          ports:
+            - containerPort: 3306

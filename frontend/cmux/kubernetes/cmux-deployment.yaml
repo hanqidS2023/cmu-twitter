@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmu-x-deployment
+  labels:
+    app: cmu-x-frontend
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: cmu-x-frontend
+  template:
+    metadata:
+      labels:
+        app: cmu-x-frontend
+    spec:
+      containers:
+      - name: cmu-x-frontend-container
+        image: leolando/cmux-frontend:v1
+        ports:
+        - containerPort: 80 
+        env:
+        - name: REACT_APP_SUBSCRIPTION_SERVICE_URL
+          value: "http://gateway-service:5001/"
+        - name: REACT_APP_URL
+          value: "http://gateway-service:5001/"
+        - name: REACT_APP_POST_URL
+          value: "http://gateway-service:5001/"
+        - name: SOCKJS_CLIENT_CHAT_URL
+          value: "http://chat-service:8080/"
+        - name: SOCKJS_CLIENT_POST_URL
+          value: "http://post-service:9000/"

@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-service-env
+data:
+  SPRING_DATASOURCE_URL: jdbc:mysql://user-db-service:3306/sda-user?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+  SPRING_DATASOURCE_USERNAME: root
+  SPRING_DATASOURCE_PASSWORD: cmux-password
+  SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+  SPRING_JPA_HIBERNATE_DDL_AUTO: update
+  SPRING_JPA_SHOW_SQL: "true"
+  SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+  JWT_SECRET_KEY: myVerySecretAndComplexKey!@#2023
+  JWT_EXPIRATION_MS: "3600000"
+  JWT_REFRESH_EXPIRATION_MS: "604800000"
+  SERVER_PORT: "5002"
+  SPRING_RABBITMQ_HOST: rabbitmq
+  SPRING_RABBITMQ_PORT: "5672"
+  SPRING_RABBITMQ_USERNAME: guest
+  SPRING_RABBITMQ_PASSWORD: guest
+  RABBITMQ_QUEUE_NAME_USER_NEWICON: "cmu-x-user-newicon"
+  RABBITMQ_EXCHANGE_NAME: "cmuxExchange"
+  RABBITMQ_EXCHANGE_FANOUT_NAME: "cmuxfanoutExchange"
+  RABBITMQ_NEWUSER_ROUTING_KEY: "cmux-newuser"
+  RABBITMQ_NEWICON_ROUTING_KEY: "cmux-newicon"
+  SPRING_DATA_REDIS_HOST: user-redis-service
+  SPRING_DATA_REDIS_PORT: "6379"

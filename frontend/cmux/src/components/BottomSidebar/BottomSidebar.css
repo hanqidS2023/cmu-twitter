@@ -1,0 +1,21 @@
+.bottomSidebar {
+  display: none;
+}
+@media (min-width: 0) and (max-width: 450px) {
+  .bottomSidebar {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    background-color: var(--main-bg-color);
+    border-top: 1px solid var(--border-color);
+  }
+  .bottomSidebar > div {
+    flex: 0.25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

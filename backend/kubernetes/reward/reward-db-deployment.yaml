@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reward-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reward-db
+  template:
+    metadata:
+      labels:
+        app: reward-db
+    spec:
+      containers:
+      - name: reward-db
+        image: mysql:latest
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "password"
+        - name: MYSQL_DATABASE
+          value: "sda-reward"
+        - name: MYSQL_USER
+          value: "reward"
+        - name: MYSQL_PASSWORD
+          value: "password"
+        ports:
+        - containerPort: 3306

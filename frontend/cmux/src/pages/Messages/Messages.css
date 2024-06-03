@@ -1,0 +1,73 @@
+.messages {
+  flex: 0.4;
+  border-right: 0.5px var(--border-color) solid;
+  border-left: 0.5px var(--border-color) solid;
+}
+
+.messagesHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.messagesHeader>span {
+  font-size: 19px;
+  font-weight: 800;
+  color: white;
+}
+
+.messagesHeader>svg {
+  width: 23px;
+  height: 23px;
+  fill: var(--blue);
+  padding: 8px;
+  border-radius: 9999px;
+  margin: 8px 8px 8px auto;
+}
+
+.messagesHeader>svg:hover {
+  background-color: var(--hover-blue-color);
+}
+
+.messagesHeader .MuiAvatar-root {
+  display: none;
+}
+
+.messagesSearchInput {
+  padding: 13px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media (min-width: 0) and (max-width: 1000px) {
+  .messages {
+    flex: 1;
+  }
+
+  .messagesNone {
+    display: none;
+  }
+}
+
+@media (min-width: 0) and (max-width: 450px) {
+  .messages {
+    flex: 1;
+  }
+
+  .messagesHeader .MuiAvatar-root {
+    display: block;
+    margin-right: 20px;
+    height: 32px;
+    width: 32px;
+  }
+
+  .lastMessages {
+    min-height: 100vh;
+  }
+}
+
+.groupDialog {
+  text-align: center;
+  color: white;
+}

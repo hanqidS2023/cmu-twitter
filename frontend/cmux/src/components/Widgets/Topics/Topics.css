@@ -1,0 +1,40 @@
+.widgetsTopics {
+  background-color: var(--element-bg-color);
+  margin-top: 15px;
+  border-radius: 20px;
+}
+.widgetsTopicsHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px var(--border-color) solid;
+  padding: 0px 15px 0px 10px;
+}
+.widgetsTopicsHeader > span {
+  color: white;
+  font-size: 19px;
+  font-weight: 800;
+}
+.widgetsTopicsHeader > svg {
+  margin: 5px 0px 5px auto;
+  width: 22.5px;
+  height: 22.5px;
+  fill: var(--blue);
+  padding: 8px;
+  border-radius: 9999px;
+}
+.widgetsTopicsHeader > svg:hover {
+  background-color: var(--hover-blue-color);
+}
+.widgetsTopicMore {
+  padding: 15px;
+}
+.widgetsTopicMore:hover {
+  background-color: #162d40;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.widgetsTopicMore > span {
+  color: var(--blue);
+  display: inline;
+  font-size: 15px;
+}

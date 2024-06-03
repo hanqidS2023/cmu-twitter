@@ -1,0 +1,22 @@
+:root {
+  --main-bg-color: #15202b;
+  --blue: #1da1f2;
+  --element-bg-color: #192734;
+  --hover-color: #1c2732;
+  --hover-blue-color: #162d40;
+  --border-color: #38444d;
+  --gray: #8899a6;
+  --input-background-color: #253341;
+  --from-message-color: #3d5466;
+}
+body {
+  background-color: var(--main-bg-color);
+  overflow-y: hidden;
+  width: 100vw;
+  box-sizing: border-box;
+}
+@media (min-width: 0) and (max-width: 350px) {
+  * {
+    font-size: 0.9rem !important;
+  }
+}

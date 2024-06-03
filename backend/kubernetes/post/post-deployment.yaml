@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: post
+  template:
+    metadata:
+      labels:
+        app: post
+    spec:
+      containers:
+        - name: post-container
+          image: jasonz24/postservice:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
+          envFrom:
+            - configMapRef:
+                name: post-config

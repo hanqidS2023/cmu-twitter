@@ -1,0 +1,38 @@
+.home {
+  display: flex !important;
+  flex-direction: row !important;
+  padding: 0 10px;
+  max-width: 1300px ;
+  margin-left: auto ;
+  margin-right: auto;
+  height: 100vh;
+}
+.homeBox {
+  max-width: 1300px ;
+  margin-left: auto ;
+  margin-right: auto;
+  flex: 0.8;
+  overflow-y: scroll;
+  display: flex !important;
+  flex-direction: row !important;
+  height: 100vh;
+}
+.homeBox::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 0) and (max-width: 1000px) {
+  .home {
+    max-width: 688px;
+  }
+  .homeBox {
+    flex: 0.9;
+  }
+}
+@media (min-width: 0) and (max-width: 450px) {
+  .home {
+    padding: 0px;
+  }
+  .homeBox {
+    flex: 1;
+  }
+}

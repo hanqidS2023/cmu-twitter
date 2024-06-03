@@ -1,0 +1,58 @@
+.explore-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 0.5px var(--border-color) solid;
+}
+
+.explore-header > .widgetsSearch {
+  padding: 5px 18px;
+}
+.explore-header > svg {
+  fill: var(--blue);
+  padding: 5px;
+  width: 23px;
+  height: 23px;
+  border-radius: 9999px;
+  margin-left: 10px;
+}
+.explore-header > svg:hover {
+  background-color: var(--hover-blue-color);
+}
+.explore-header .MuiAvatar-root {
+  display: none;
+}
+.feed .widgetsTopics {
+  background-color: var(--main-bg-color);
+  border-radius: 0px;
+  margin-top: 0px;
+}
+
+.feed .widgetsTopics > .widgetsTopicMore {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 0.5px var(--border-color) solid;
+}
+
+.feed .widgetsTopics > .widgetsTopicsHeader > svg {
+  display: none;
+}
+.feed .widgetsTopics > .widgetsTopicsHeader > span {
+  padding: 10px 0px;
+}
+.exploreContent {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 0) and (max-width: 450px) {
+  .explore-header .MuiAvatar-root {
+    display: block;
+    margin-right: 20px;
+    height: 32px;
+    width: 32px;
+  }
+  .exploreContent {
+    min-height: 100vh;
+  }
+}
